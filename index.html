@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" >
+	<meta name="viewport" conent="content=device-width, initial-scale=1.0" >
+	<title></title>
+	<link rel="stylesheet" href="styling.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">PortFolio<span>.</span></a>
+		<div class="menuToggle" onclick="toggleMenu()"></div>
+		<ul class="navigation">
+			<li><a href="#banner" onclick="toggleMenu()">Home</a></li>
+			<li><a href="#about" onclick="toggleMenu()">About</a></li>
+			<li><a href="#menu" onclick="toggleMenu()">Skills</a></li>
+			<li><a href="#expert" onclick="toggleMenu()">Websites</a></li>
+			<li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+		</ul>
+	</header>
+	<section class="hr"><hr style="width:90%;text-align:center;"></section>
+	<section class="banner" id="banner">
+		<div class="row">
+			<div class="col50">
+			<h2>Hi ,</h2><br>
+			<h2>I am <span>Peter Mofied</span></h2><br>
+			<h2>Web Developer</h2>
+			<a href="#contact" class="btn">Contact me</a>
+			</div>
+            <div class="col50">
+            	<div class="imgBx">
+            		<img src="peter1.jpg">
+            	</div>
+            </div>
+        </div> 		
+	</section>
+	<section class="about" id="about">
+		<div class="row">
+			<div class="col50">
+				<br><br>
+				<h2 class="titletext"><span>A</span>bout Me</h2>
+				<p>I am a Freelancer Web Developer. I can implement many front end websites with such an awesome appearance. I make website Responsive on different devices. Also, I make websites based on a database that can add or get information based on it like making online store to show your products and many other websites. </p>
+            </div>
+            <div class="col50">
+            	<div class="imgBx">
+            		<img src="peter2.jpg">
+            	</div>
+            </div>
+        </div> 		
+	</section>
+	<section class="menu" id="menu">
+		<div class="title">
+			<br>
+			<h2 class="titletext"><span>M</span>y Skills</h2>
+			<div class="row">
+			<div class="col50">
+            	<div class="imgBx">
+            		<img src="peter3.jpg">
+            	</div>
+            </div>
+			<div class="col50">
+				<br><br><br>
+				<center><p style="text-align: center;" class="titletext"><span style="color:white;">S</span>oftware Skills</p></center>
+				<br><br>
+				<div class="row">
+				<div style="text-align: right;"class="col50">
+					<h5>html</h5>
+					<h5>css</h5>
+					<h5>css3</h5>
+					<h5>javascript</h5>
+				</div>
+           		<div class="col50">
+            		<h5>Bootstrap</h5>
+					<h5>sass</h5>
+					<h5>Php</h5>
+					<h5>Mysql</h5>
+            	</div>
+        	</div> 	
+            </div>
+        </div>			
+	</section>
+	<section class="about" id="expert">
+		<div class="row">
+			<div class="col50">
+				<br><br>
+				<h2>My Published Websites</h2>
+				<ol type="1">
+				  <li>dr-bishoy.c1.biz</li>
+				  <li>foodings.c1.biz</li>
+				</ol>  
+            </div>
+            <div class="col50">
+            	<div class="imgBx">
+            		<img src="Websites.jpg">
+            	</div>
+            </div>
+        </div> 		
+	</section>
+	<section class="contact" id="contact">
+		<div class="title">
+			<h2 class="titletext"><span>C</span>ontact Me</h2>
+			<div class="row">
+			<div class="col50">
+            	<div class="imgBx">
+            		<br><br>
+            		<label for="fname">
+            			<i class="fa fa-envelope" aria-hidden="true"></i>
+            			E-mail: petermofied@gmail.com
+            		</label><br><br>
+            		<label for="fname">
+            			<i class="fa fa-mobile" style="padding:10px 15px 10px 15px;" aria-hidden="true"></i>
+            			mobile: +201111848143
+            		</label><br><br>
+            		<label for="fname">
+            			<i class="fa fa-facebook" style="padding:10px 15px 10px 15px;" aria-hidden="true"></i>
+            			facebook: www.facebook.com/peter.m.fadel
+            		</label><br><br>
+            		<label for="fname">
+            			<i class="fa fa-git" aria-hidden="true"></i>
+            			Git: github.com/peter-peterr
+            		</label><br><br>
+            	</div>
+            </div>
+			<div class="col50">
+				<div>
+ 					 <form action="/action_page.php">
+  					  <label for="fname">Full Name</label>
+  					  <input type="text" id="fname" name="firstname" placeholder="Enter Your name..">
+
+  					  <label for="lname">Your Comment</label>
+   						 <input type="text" id="lname" name="lastname" placeholder="Type Your Comment Here..">
+
+   						 <label for="country">Country</label>
+  						  <select id="country" name="country">
+  						  	<option value="usa">USA</option>
+  						  	<option value="egypt">Egypt</option>
+   						   <option value="australia">Australia</option>
+    						<option value="canada">Canada</option>   						   
+   					 </select>
+  
+  					  <input type="submit" value="Submit">
+ 					 </form>
+				</div>
+        	</div> 	
+            </div>
+        </div>			
+	</section>
+
+	<script type="text/javascript">
+		window.addEventListener('scroll', function(){
+			const header = document.querySelector('header');
+			header.classList.toggle("sticky", window.scrollY >0);
+		});
+
+		function toggleMenu(){
+			const menuToggle = document.querySelector('.menuToggle');
+			const navigation = document.querySelector('.navigation');
+			menuToggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
+	</script>
+</body>
+</html>
